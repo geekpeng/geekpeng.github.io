@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div id="post">
+	<article>
+		<div class="">
+		<div class="">
+			<header class="">
+				<h2 style="border-bottom: 5px solid rgba(21, 25, 25, 0.8);">WEINFEST IN UNKEL</h2>
+				<p class="date-publish">
+				Published: 
+				<date pubdate="" datetime="2011-12-29T00:00:00-08:00" title="2011-12-29T00:00:00-08:00" class="date-pub">
+				<span class="month"><abbr>December</abbr></span>
+				<span class="day">29</span>
+				<span class="year">2011</span>
+				</date>
+				</p>
+				<p>
+					<span>category:</span>
+					{% for categorie in page.categories %}
+						<span>{{categorie}}</span>
+					{% endfor %}
+					
+				</p>
+				<p>
+					<span>tags:</span>
+					{% for tag in page.tags %}
+						<span>{{tag}}</span>
+					{% endfor %}
+					<span>category</span>
+				</p>
+			</header>
+			<div class="post_wrapper">
+				<div class="post_content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="">
+				
+			</div>
+		</div>
+		<div class="social_div">
+			<div class="">
+				<span>link</span><span>link</span>
+			</div>
+		</div>
+	</div>
+	</article>
+</div>
