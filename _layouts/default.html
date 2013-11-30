@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-	<meta charset="utf-8">
-	<meta charset="utf-8">
-	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>{{page.title}}</title>
-	<meta content="width=device-width" name="viewport">
-	<link href="/css/layout.css" rel="stylesheet">
+	
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+    <title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | geekeach</title>
+    {% if page.keywords %}<meta name="keywords" content="{% for keyword in page.keywords %}{{ keyword }},{% endfor %}" />{% endif %}
+	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
+	<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="{{site.static}}{{site.static}}/ref/prettify/prettify_desert.css">
+	<link rel="stylesheet" href="{{site.static}}{{site.static}}/css/md.css" />
+	<style>
+		body { padding-top: 70px; }
+	</style>
+	
 </head>
 <body>
-	<div id="fixed_top">
-		<div id="top_nav">
-			
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  <span class="sr-only">geekeach</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{site.basePath}}">geekeach</a>
 		</div>
-	</div>
-	<div id="wrapper">
-		<div id="main">
-			<div id="main_content">
-				{{content}}
-			</div>
-			<div id="sidebar">
-				<div id="side_content">
-				<h4>about</h4>
-				<ul class="about_ul">
-					<li class="contact"><address><span class="author fn n">Jade Dominguez</span> - <span class="fn email">plusjade@gmail.com</span></address></li>
-					<li class="github"><a rel="me" href="http://github.com/plusjade/">github.com/plusjade</a></li>
-					<li class="twitter"><a rel="me" href="http://twitter.com/plusjade/">twitter.com/plusjade</a></li>
-					<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
-				</ul>
-				</div>
-			</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#">home</a></li>
+			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">share</a></li>
+			  <li><a href="#">sublice</a></li>
+			</ul>
 		</div>
-		
-	</div>
-	<div id="footer">
-		footer
-	</div>
+	</nav>
+	
+		<div class="col-xs-12 col-md-8 col-sm-8">
+			{{ content }}
+		</div>
+		<div class="col-md-4 col-sm-4 hidden-xs"></div>
+		<div class="">
+		</div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("pre").addClass("prettyprint");
+			prettyPrint();
+		});
+	</script>
 </body>
 </html>
