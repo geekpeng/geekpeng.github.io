@@ -6,8 +6,8 @@ layout: default
 		<article>
 			<div class="meta">
 				<p class="date-publish">
-				Published:{{page.date|date_to_string}}
-			</p>
+					Published:{{page.date|date_to_string}}
+				</p>
 				{% if page.tags %}
 				<ul class="list-tag list-inline">
 					<li class="list-head">tags: </li>
@@ -16,8 +16,9 @@ layout: default
 					{% endfor %}
 				</ul>
 				{% endif %}
-		</div>
+			</div>
 			<div class="post">
+				<h1>{{page.title}}</h1>
 				{{ content }}
 			</div>
 			<div id="disqus_thread">
