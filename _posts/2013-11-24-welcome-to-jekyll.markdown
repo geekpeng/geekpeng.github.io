@@ -4,6 +4,8 @@ title:  "Welcome to Jekyll!"
 date:   2013-11-24 23:43:48
 categories: jekyll update
 tags: tag1 tag2 tag3 tag4
+keywords: test jekyll welcome
+description: this is a page test for jekyll in github
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
