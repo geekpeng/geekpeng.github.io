@@ -6,16 +6,16 @@ layout: default
 		<article>
 			<div class="meta">
 				<p class="date-publish">
-				Published:{{post.date|date_to_string}}
+				Published:{{page.date|date_to_string}}
 			</p>
-				{% if page.tags%}
+				{% if page.tags %}
 				<ul class="list-tag list-inline">
 					<li class="list-head">tags: </li>
 					{% for tag in page.tags %}
 					<li><a href="{{site.basePath}}/tags.html#{{tag}}-ref"><span class="label label-default">{{tag}}</span></a></li>
 					{% endfor %}
 				</ul>
-				{{% endif %}}
+				{% endif %}
 		</div>
 			<div class="post">
 				{{ content }}
