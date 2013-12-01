@@ -55,5 +55,11 @@
     <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
 	<script src="{{site.basePath}}{{site.static}}/ref/prettify/prettify.js"></script>
 	<script src="{{site.basePath}}{{site.static}}/ref/analytics/analytics.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("pre").addClass("prettyprint");
+			prettyPrint();
+		});
+	</script>
 </body>
 </html>
