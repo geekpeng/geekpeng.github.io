@@ -1,0 +1,24 @@
+---
+layout: default
+titile: categories
+---
+
+<div>
+ <section>
+  <h1>categories</h1>
+  <ul class="list-inline">
+   {% for category in site.categories%}
+    <li><a href="{{site.basePath}}/categories.html#{{category[0]}}-ref"><span class="label label-default">{{category[0]}}<span class="badge">{{category[1].size}}</span><span></a></li>
+   {% endfor %}
+  </ul>
+
+  {% for category in site.categories %}
+   <h2 id="{{category[0]}}-ref">{{category[0]}}</h2>
+   <ul>
+    {% for post in category[1] %}
+     <li><a href="{{site.basePath}}{{post.url}}">{{post.title}}</a></li>
+    {% endfor%}
+   </ul>
+  {% endfor %}
+ </section> 
+</div>

@@ -4,9 +4,8 @@
 	
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="" />
     <title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | geekeach</title>
-    {% if page.keywords %}<meta name="keywords" content="{% for keyword in page.keywords %}{{ keyword }},{% endfor %}" />{% endif %}
+    {% if page.keywords %}<meta name="keywords" content="{{page.keywords}}" />{% endif %}
 	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
@@ -35,12 +34,11 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-			  <li class="active"><a href="{{site.basePath}}">home</a></li>
+			  <li class="active"><a href="{{site.basePath}}">archive</a></li>
 			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="#">share</a></li>
-			  <li><a href="#">sublice</a></li>
+			  <li><a href="{{ site.basePath}}/feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.basePath}}{{site.static}}/image/glyphicons_417_rss.png"/></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -51,7 +49,7 @@
 		</div>
 		<div class="col-md-3 col-sm-3 hidden-xs"></div>
 		</div>
-		<div class=""></div>
+	<div class=""></div>
 
     <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>

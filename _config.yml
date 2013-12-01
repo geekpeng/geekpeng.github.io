@@ -1,7 +1,10 @@
-name: Your New Jekyll Site
+name: geekeach
 markdown: redcarpet
 pygments: true
 port: 4444
 basePath: //www.geekeach.com
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
+auther: 
+ name: geek03
+ email : geekeach@gmail.com

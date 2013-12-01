@@ -1,0 +1,38 @@
+---
+layout: none
+---
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+<channel>
+<title>{{ site.name }}</title>
+<atom:link href="{{ site.basePath }}/feed.xml" rel="self" type="application/rss+xml"/>
+<link>{{ site.basePath }}</link>
+<description>{{ site.description }}</description>
+<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+<language>zh-CN</language>
+{% for post in site.posts limit:10 %}
+<item>
+<title>{{ post.title }}</title>
+<link>{{ site.basePath }}{{ post.url }}</link>
+<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+<dc:creator>
+<![CDATA[ {{ site.auther.name }} ]]>
+</dc:creator>
+<category>
+<![CDATA[ {{ post.categories }} ]]>
+</category>
+<guid isPermaLink="true">{{ site.basePath }}{{ post.url }}</guid>
+<description>
+<![CDATA[
+	{{ post.description }}
+]]>
+</description>
+<content:encoded>
+<![CDATA[
+	{{ post.content }}
+]]>
+</content:encoded>
+</item>
+{% endfor %}
+</channel>
+</rss>
