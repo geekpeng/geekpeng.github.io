@@ -4,9 +4,17 @@
 	
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | geekeach</title>
-    {% if page.keywords %}<meta name="keywords" content="{{page.keywords}}" />{% endif %}
-	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <title>geekeach{% if page.head_title %}-{{ page.head_title }}{% else %}-{{ page.title }}{% endif %}</title>
+    {% if page.keywords %}
+	<meta name="keywords" content="{{page.keywords}}" />
+	{% else %}
+	<meta name="keywords" content="geekeach,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby" />
+	{% endif %}
+	{% if page.description %}
+	<meta name="description" content="{{ page.description }}">
+	{% else %}
+	<meta name="description" content="geekeach,一个geek程序员的简洁博客,回归技术和写博客的本质,记录个人的编程成长笔记,发表个人博客文章,分享国内外一些优秀的编程文章,交流与学习">
+	{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
 	<!--[if lt IE 9]>
