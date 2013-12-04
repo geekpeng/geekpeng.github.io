@@ -15,7 +15,12 @@
 	{% else %}
 	<meta name="description" content="geekeach,一个geek程序员的简洁博客,回归技术和写博客的本质,记录个人的编程成长笔记,发表个人博客文章,分享国内外一些优秀的编程文章,交流与学习">
 	{% endif %}
+	{% if page.author %}
+	<meta name="author" content="{{ page.author }}">
+	{% else %}
 	<meta name="author" content="{{ site.author.name }}">
+	{% endif %}
+	
 	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
 	<!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
