@@ -19,10 +19,10 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" />
-    <link href="{{basePath}}{{static}}/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="{{basePath}}{{static}}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-	<link href="{{basePath}}{{static}}/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="{{basePath}}{{static}}/css/layerslider.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.basePath}}{{site.static}}/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.basePath}}{{site.static}}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="{{site.basePath}}{{site.static}}/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="{{site.basePath}}{{site.static}}/css/layerslider.css" rel="stylesheet" type="text/css" />
 	
 	<!--[if lt IE 9 ]>
 	  <link href="css/styleIE.css" rel="stylesheet">
@@ -79,104 +79,6 @@
 	<div class="container">
 		
 		{{ content }}
-		
-		<!--start: Wrapper-->
-		<div id="wrapper">
-			
-			<div id="filters">
-				<ul class="option-set" data-option-key="filter">
-					<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
-					<li>/</li>
-					<li><a href="#filter" data-option-value=".nature">Nature</a></li>
-					<li>/</li>
-					<li><a href="#filter" data-option-value=".people">People</a></li>
-					<li>/</li>
-					<li><a href="#filter" data-option-value=".scenery">Scenery</a></li>
-					<li>/</li>
-					<li><a href="#filter" data-option-value=".world">World</a></li>
-				</ul>
-			</div>
-	
-			<!-- start: Portfolio -->
-			<div id="wall" class="row-fluid">
-								
-				<div class="span3 item nature people">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo1.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							</p>
-						</div>
-					</div>	
-				</div>
-
-				<div class="span3 item scenery">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo3.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-						</p>
-						<div class="meta">
-							<span><i class="fa-icon-calendar"></i>1 June 2011</span>
-							<span><i class="fa-icon-user"></i> <a href="#">lucas</a></span>
-							<span><i class="fa-icon-heart-empty"></i> 88</span>
-						</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="span3 item world scenery">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo5.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="span3 item nature scenery">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo6.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="span3 item world">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo4.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-							</p>
-						</div>	
-					</div>
-				</div>
-
-				<div class="span3 item world people">
-					<div class="picture">
-						<a class="image" href="project.html" title="Title"><img src="img/photo8.jpg" alt="" /></a>
-						<div class="description">
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-							</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!-- end: Portfolio -->
-			
-		</div>
-		<!-- end: Wrapper  -->
-      	
 	</div>
 	<!--end: Container-->
 				
@@ -254,30 +156,30 @@
 	
 <!-- start: Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="{{basePath}}{{static}}/js/jquery-1.8.2.js"></script>
-<script src="{{basePath}}{{static}}/js/isotope.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.imagesloaded.js"></script>
-<script src="{{basePath}}{{static}}/js/bootstrap.js"></script>
-<script src="{{basePath}}{{static}}/js/flexslider.js"></script>
-<script src="{{basePath}}{{static}}/js/carousel.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.cslider.js"></script>
-<script src="{{basePath}}{{static}}/js/slider.js"></script>
-<script src="{{basePath}}{{static}}/js/fancybox.js"></script>
-<script src="{{basePath}}{{static}}/js/twitter.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.placeholder.min.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery-1.8.2.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/isotope.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.imagesloaded.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/bootstrap.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/flexslider.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/carousel.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.cslider.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/slider.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/fancybox.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/twitter.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.placeholder.min.js"></script>
 
-<script src="{{basePath}}{{static}}/js/jquery-easing-1.3.js"></script>
-<script src="{{basePath}}{{static}}/js/layerslider.kreaturamedia.jquery.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery-easing-1.3.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/layerslider.kreaturamedia.jquery.js"></script>
 
-<script src="{{basePath}}{{static}}/js/excanvas.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.flot.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.flot.pie.min.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.flot.stack.js"></script>
-<script src="{{basePath}}{{static}}/js/jquery.flot.resize.min.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/excanvas.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.pie.min.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.stack.js"></script>
+<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.resize.min.js"></script>
 
-<script defer="defer" src="{{basePath}}{{static}}/js/modernizr.js"></script>
-<script defer="defer" src="{{basePath}}{{static}}/js/retina.js"></script>
-<script defer="defer" src="{{basePath}}{{static}}/js/custom.js"></script>
+<script defer="defer" src="{{site.basePath}}{{site.static}}/js/modernizr.js"></script>
+<script defer="defer" src="{{site.basePath}}{{site.static}}/js/retina.js"></script>
+<script defer="defer" src="{{site.basePath}}{{site.static}}/js/custom.js"></script>
 <!-- end: Java Script -->
 
 </body>
