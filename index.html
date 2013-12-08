@@ -9,7 +9,7 @@ layout: default
 			<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
 			{% for category in site.categories %}
 			<li>/</li>
-			<li><a href="#filter" data-option-value=".nature">{{category[0]}}</a></li>
+			<li><a href="#filter" data-option-value=".{{category[0]}}">{{category[0]}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -18,7 +18,7 @@ layout: default
 	<div id="wall" class="row-fluid">
 		
 		{% for post in site.posts %}
-			<div class="span3 item {% for category in post.categories %}{{category}} {% endfor%}">
+			<div class="span3 item isotope-item {% for category in post.categories %}{{category}} {% endfor%}">
 				<div class="picture">
 					<div class="description">
 						<p>
