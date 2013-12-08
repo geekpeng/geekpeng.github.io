@@ -2,7 +2,7 @@ name: geekeach
 markdown: redcarpet
 pygments: true
 port: 4444
-basePath: /
+basePath: //geekpeng.github.io
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
 auther: 

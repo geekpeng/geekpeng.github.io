@@ -24,7 +24,6 @@ layout: default
 		{% for post in site.posts %}
 			<div class="span3 item {% for category in post.categories %}{{category}} {% endfor%}">
 				<div class="picture">
-					<a class="image" href="{{basePath}}{{post.url}}" title="Title"><img src="img/photo3.jpg" alt="" /></a>
 					<div class="description">
 						<p>
 							{{post.excerpt}}
