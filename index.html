@@ -9,7 +9,7 @@ layout: default
 			<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
 			{% for category in site.categories %}
 			<li>/</li>
-			<li><a href="#filter" data-option-value=".nature">{{ category }}</a></li>
+			<li><a href="#filter" data-option-value=".nature">{{category[0]}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
