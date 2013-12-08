@@ -7,14 +7,10 @@ layout: default
 	<div id="filters">
 		<ul class="option-set" data-option-key="filter">
 			<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
+			{% for category in site.categories %}
 			<li>/</li>
-			<li><a href="#filter" data-option-value=".nature">Nature</a></li>
-			<li>/</li>
-			<li><a href="#filter" data-option-value=".people">People</a></li>
-			<li>/</li>
-			<li><a href="#filter" data-option-value=".scenery">Scenery</a></li>
-			<li>/</li>
-			<li><a href="#filter" data-option-value=".world">World</a></li>
+			<li><a href="#filter" data-option-value=".nature">{{ category }}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 
@@ -30,8 +26,8 @@ layout: default
 						</p>
 					<div class="meta">
 						<span><i class="fa-icon-calendar"></i>{{post.date|date_to_string}}</span>
-						<span><i class="fa-icon-user"></i> <a href="#">lucas</a></span>
-						<span><i class="fa-icon-user"></i> <a href="{{site.basePath}}{{post.url}}">more</a></span>
+						<span><i class="fa-icon-user"></i> <a href="#">ipenglei</a></span>
+						<span><i class=""></i> <a href="{{site.basePath}}{{post.url}}">more...</a></span>
 					</div>
 					</div>
 				</div>
