@@ -1,23 +1,23 @@
 ---
 layout: default
 ---
-		<!--start: Wrapper-->
-		<div id="wrapper">
-					
-			<!--start: Row -->
-			<div class="row-fluid">
+<!--start: Wrapper-->
+<div id="wrapper">
 			
-				<div class="posts span8">
-					<ul class="arrow_list">
-					{% for post in site.posts%}
-						<li><a href="{{basePath}}{{post.url}}">{{post.title}}</a></li>
-					{% endfor %}
-					</ul>
-				</div>
-			
-			<!--end: Row -->
-			</div>
+	<!--start: Row -->
+	<div class="row-fluid">
 	
+		<div class="posts span8">
+			<ul class="arrow_list">
+			{% for post in site.posts%}
+				<li><a href="{{basePath}}{{post.url}}">{{post.title}}</a></li>
+			{% endfor %}
+			</ul>
 		</div>
-		<!-- end: Wrapper  -->
+	
+	<!--end: Row -->
+	</div>
+
+</div>
+<!-- end: Wrapper  -->
 	
