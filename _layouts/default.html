@@ -1,78 +1,284 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title></title> 
+	<meta name="description" content="Tabula Bootstrap Theme" />
+	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap, pin, wall, responsive, fluid, retina" />
+	<meta name="author" content="Łukasz Holeczek from creativeLabs" />
+	<!-- end: Meta -->
 	
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>geekeach{% if page.head_title %}-{{ page.head_title }}{% else %}-{{ page.title }}{% endif %}</title>
-    {% if page.keywords %}
-	<meta name="keywords" content="{{page.keywords}}" />
-	{% else %}
-	<meta name="keywords" content="geekeach,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby" />
-	{% endif %}
-	{% if page.description %}
-	<meta name="description" content="{{ page.description }}">
-	{% else %}
-	<meta name="description" content="geekeach,一个geek程序员的简洁博客,回归技术和写博客的本质,记录个人的编程成长笔记,发表个人博客文章,分享国内外一些优秀的编程文章,交流与学习">
-	{% endif %}
-	{% if page.author %}
-	<meta name="author" content="{{ page.author }}">
-	{% else %}
-	<meta name="author" content="{{ site.author.name }}">
-	{% endif %}
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- end: Mobile Specific -->
 	
-	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
-	<!--[if lt IE 9]>
-        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <!-- start: CSS -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" />
+    <link href="{{basePath}}{{static}}/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{basePath}}{{static}}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="{{basePath}}{{static}}/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="{{basePath}}{{static}}/css/layerslider.css" rel="stylesheet" type="text/css" />
+	
+	<!--[if lt IE 9 ]>
+	  <link href="css/styleIE.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9 ]>
+	  <link href="css/styleIE9.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!-- end: CSS -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/ref/prettify/prettify_desert.css">
-	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/css/md.css" />
-	<style>
-		body { padding-top: 70px; }
-	</style>
-	
-</head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			  <span class="sr-only">geekeach</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="{{site.basePath}}">geekeach</a>
-		</div>
-
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-			  <li class="active"><a href="{{site.basePath}}">archive</a></li>
-			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="{{ site.basePath}}/feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.basePath}}{{site.static}}/image/glyphicons_417_rss.png"/></a></li>
-			</ul>
-		</div>
-	</nav>
 	
+	<!--start: Header -->
+	<header>
+		
+		<!--start: Container -->
 		<div class="container">
-		<div class="col-xs-12 col-md-9 col-sm-9">
-			{{ content }}
+			
+			<!--start: Navigation -->
+			<div class="navbar navbar-inverse">
+	    		<div class="navbar-inner">
+	          		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            		<span class="icon-bar"></span>
+	            		<span class="icon-bar"></span>
+	            		<span class="icon-bar"></span>
+	          		</a>
+					<a class="brand" href="{{basePath}}{{static}}index.html">geekeach</a>
+	          		<div class="nav-collapse collapse">
+	            		<ul class="nav">
+							<li><a href="{{basePath}}{{static}}index.html">Home</a></li>
+	              			<li><a href="{{basePath}}{{static}}blog.html">Blog</a></li>
+							<li><a href="{{basePath}}{{static}}archive.html">Archive</a></li>
+	              			<li><a href="http://www.geekeach.com">Work</a></li>
+							<li><a href="{{basePath}}{{static}}about.html">About</a></li>
+	            		</ul>
+	          		</div>
+	        	</div>
+	      	</div>	
+			<!--end: Navigation -->
+			
 		</div>
-		<div class="col-md-3 col-sm-3 hidden-xs"></div>
-		</div>
-	<div class=""></div>
+		<!--end: Container-->			
+			
+	</header>
+	<!--end: Header-->		
+	<!-- start: Container -->	
+	<div class="container">
+		
+		{{ content }}
+		
+		<!--start: Wrapper-->
+		<div id="wrapper">
+			
+			<div id="filters">
+				<ul class="option-set" data-option-key="filter">
+					<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
+					<li>/</li>
+					<li><a href="#filter" data-option-value=".nature">Nature</a></li>
+					<li>/</li>
+					<li><a href="#filter" data-option-value=".people">People</a></li>
+					<li>/</li>
+					<li><a href="#filter" data-option-value=".scenery">Scenery</a></li>
+					<li>/</li>
+					<li><a href="#filter" data-option-value=".world">World</a></li>
+				</ul>
+			</div>
+	
+			<!-- start: Portfolio -->
+			<div id="wall" class="row-fluid">
+								
+				<div class="span3 item nature people">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo1.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+					</div>	
+				</div>
 
-    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
-	<script src="{{site.basePath}}{{site.static}}/ref/prettify/prettify.js"></script>
-	<script src="{{site.basePath}}{{site.static}}/ref/analytics/analytics.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("pre").addClass("prettyprint");
-			prettyPrint();
-		});
-	</script>
+				<div class="span3 item scenery">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo3.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+						</p>
+						<div class="meta">
+							<span><i class="fa-icon-calendar"></i>1 June 2011</span>
+							<span><i class="fa-icon-user"></i> <a href="#">lucas</a></span>
+							<span><i class="fa-icon-heart-empty"></i> 88</span>
+						</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="span3 item world scenery">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo5.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="span3 item nature scenery">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo6.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="span3 item world">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo4.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+							</p>
+						</div>	
+					</div>
+				</div>
+
+				<div class="span3 item world people">
+					<div class="picture">
+						<a class="image" href="project.html" title="Title"><img src="img/photo8.jpg" alt="" /></a>
+						<div class="description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- end: Portfolio -->
+			
+		</div>
+		<!-- end: Wrapper  -->
+      	
+	</div>
+	<!--end: Container-->
+				
+	<!-- start: Footer -->
+	<div id="footer">
+		
+		<!-- start: Container -->
+		<div class="container">
+	
+			<!-- start: Row -->
+			<div class="row-fluid">
+
+				<!-- start: About -->
+				<div class="span3">
+					
+					<h3>creativeLabs</h3>
+					<p>
+						<i class="fa-icon-envelope"></i> Email: ipenglei03#gmail.com
+					</p>
+					<p>
+						<i class="fa-icon-globe"></i> Web: wwww.geekeach.com
+					</p>
+						
+				</div>
+				<!-- end: About -->
+
+				<!-- start: Latest Tweets -->
+				<div class="span3">
+				</div>
+				<!-- end: Latest Tweets -->
+
+				<!-- start: Photo Stream -->
+				<div class="span3">
+				</div>
+				<!-- end: Photo Stream -->
+				
+				<!-- start: Follow Us -->
+				<div class="span3">
+					
+					<h3>Follow Us</h3>
+					
+					<a href="#" class="social-dribbble"></a>
+					<a href="#" class="social-twitter"></a>
+					<a href="#" class="social-flickr"></a>
+					<a href="#" class="social-facebook"></a>
+					<a href="#" class="social-linkedin"></a>
+					<a href="#" class="social-vimeo"></a>
+					<a href="#" class="social-youtube"></a>
+					<a href="#" class="social-delicious"></a>
+					<a href="#" class="social-rss"></a>
+					<a href="#" class="social-picassa"></a>
+					<a href="#" class="social-deviantart"></a>
+					<a href="#" class="social-technorati"></a>
+					<a href="#" class="social-stumbleupon"></a>
+					<a href="#" class="social-appstore"></a>
+					<a href="#" class="social-paypal"></a>
+					<a href="#" class="social-myspace"></a>
+					<a href="#" class="social-pinterest"></a>
+					<a href="#" class="social-soundcloud"></a>
+					<a href="#" class="social-behance"></a>
+					<a href="#" class="social-instagram"></a>
+					<a href="#" class="social-googleplus"></a>
+	
+				</div>
+				<!-- end: Follow Us -->
+				
+			</div>
+			<!-- end: Row -->
+		
+		</div>
+		<!-- end: Container  -->	
+
+	</div>
+	<!-- end: Footer -->
+	
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{basePath}}{{static}}/js/jquery-1.8.2.js"></script>
+<script src="{{basePath}}{{static}}/js/isotope.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.imagesloaded.js"></script>
+<script src="{{basePath}}{{static}}/js/bootstrap.js"></script>
+<script src="{{basePath}}{{static}}/js/flexslider.js"></script>
+<script src="{{basePath}}{{static}}/js/carousel.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.cslider.js"></script>
+<script src="{{basePath}}{{static}}/js/slider.js"></script>
+<script src="{{basePath}}{{static}}/js/fancybox.js"></script>
+<script src="{{basePath}}{{static}}/js/twitter.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.placeholder.min.js"></script>
+
+<script src="{{basePath}}{{static}}/js/jquery-easing-1.3.js"></script>
+<script src="{{basePath}}{{static}}/js/layerslider.kreaturamedia.jquery.js"></script>
+
+<script src="{{basePath}}{{static}}/js/excanvas.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.flot.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.flot.pie.min.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.flot.stack.js"></script>
+<script src="{{basePath}}{{static}}/js/jquery.flot.resize.min.js"></script>
+
+<script defer="defer" src="{{basePath}}{{static}}/js/modernizr.js"></script>
+<script defer="defer" src="{{basePath}}{{static}}/js/retina.js"></script>
+<script defer="defer" src="{{basePath}}{{static}}/js/custom.js"></script>
+<!-- end: Java Script -->
+
 </body>
 </html>

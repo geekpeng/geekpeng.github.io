@@ -1,10 +1,45 @@
 ---
 layout: default
 ---
-<div class="post_list">
-	<ul class="posts">
+
+<!--start: Wrapper-->
+<div id="wrapper">
+	
+	<div id="filters">
+		<ul class="option-set" data-option-key="filter">
+			<li><a href="#filter" class="selected" data-option-value="*">All</a></li>
+			<li>/</li>
+			<li><a href="#filter" data-option-value=".nature">Nature</a></li>
+			<li>/</li>
+			<li><a href="#filter" data-option-value=".people">People</a></li>
+			<li>/</li>
+			<li><a href="#filter" data-option-value=".scenery">Scenery</a></li>
+			<li>/</li>
+			<li><a href="#filter" data-option-value=".world">World</a></li>
+		</ul>
+	</div>
+
+	<!-- start: Portfolio -->
+	<div id="wall" class="row-fluid">
+		
 		{% for post in site.posts %}
-		<li><span>{{post.date|date_to_string}}</span>&raquo <a href="{{post.url}}">{{post.title}}</a></li>
+			<div class="span3 item {% for category in post.categories %}{{category}} {% endfor%}">
+				<div class="picture">
+					<a class="image" href="{{basePath}}{{post.url}}" title="Title"><img src="img/photo3.jpg" alt="" /></a>
+					<div class="description">
+						<p>
+							{{post.excerpt}}
+						</p>
+					<div class="meta">
+						<span><i class="fa-icon-calendar"></i>{{post.date|date_to_string}}</span>
+						<span><i class="fa-icon-user"></i> <a href="#">lucas</a></span>
+					</div>
+					</div>
+				</div>
+			</div>
 		{% endfor %}
-	</ul>
+		
+	</div>
+	<!-- end: Portfolio -->
 </div>
+<!-- end: Wrapper  -->

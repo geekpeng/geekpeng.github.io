@@ -2,7 +2,7 @@ name: geekeach
 markdown: redcarpet
 pygments: true
 port: 4444
-basePath: //www.geekeach.com
+basePath: //localhost:4000
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
 auther: 
