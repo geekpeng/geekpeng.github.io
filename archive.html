@@ -10,7 +10,7 @@ layout: default
 		<div class="posts span8">
 			<ul class="arrow_list">
 			{% for post in site.posts%}
-				<li><a href="{{basePath}}{{post.url}}">{{post.title}}</a></li>
+				<li><a href="{{site.basePath}}{{post.url}}">{{post.title}}</a></li>
 			{% endfor %}
 			</ul>
 		</div>
