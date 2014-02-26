@@ -1,162 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-
-	<!-- start: Meta -->
-	<meta charset="utf-8" />
-	<title></title> 
-	<meta name="description" content="my-locus" />
-	<meta name="keywords" content="my-locus" />
-	<meta name="author" content="ipenglei" />
-	<!-- end: Meta -->
 	
-	<!-- start: Mobile Specific -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<!-- end: Mobile Specific -->
-	
-    <!-- start: CSS -->
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" />
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo" />
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" />
-    <link href="{{site.basePath}}{{site.static}}/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="{{site.basePath}}{{site.static}}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-	<link href="{{site.basePath}}{{site.static}}/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="{{site.basePath}}{{site.static}}/css/layerslider.css" rel="stylesheet" type="text/css" />
-	
-	<!--[if lt IE 9 ]>
-	  <link href="css/styleIE.css" rel="stylesheet">
-	<![endif]-->
-	
-	<!--[if IE 9 ]>
-	  <link href="css/styleIE9.css" rel="stylesheet">
-	<![endif]-->
-	
-	<!-- end: CSS -->
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geekeach{% if page.head_title %}-{{ page.head_title }}{% else %}-{{ page.title }}{% endif %}</title>
+    {% if page.keywords %}
+	<meta name="keywords" content="{{page.keywords}}" />
+	{% else %}
+	<meta name="keywords" content="geekeach,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby" />
+	{% endif %}
+	{% if page.description %}
+	<meta name="description" content="{{ page.description }}">
+	{% else %}
+	<meta name="description" content="geekeach,一个geek程序员的简洁博客,回归技术和写博客的本质,记录个人的编程成长笔记,发表个人博客文章,分享国内外一些优秀的编程文章,交流与学习">
+	{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
+	<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/ref/prettify/prettify_desert.css">
+	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/css/md.css" />
+	<style>
+		body { padding-top: 70px; }
+	</style>
+	
+</head>
 <body>
-	
-	<!--start: Header -->
-	<header>
-		
-		<!--start: Container -->
-		<div class="container">
-			
-			<!--start: Navigation -->
-			<div class="navbar navbar-inverse">
-	    		<div class="navbar-inner">
-	          		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	            		<span class="icon-bar"></span>
-	            		<span class="icon-bar"></span>
-	            		<span class="icon-bar"></span>
-	          		</a>
-					<a class="brand" href="{{basePath}}/index.html">my-locus</a>
-	          		<div class="nav-collapse collapse">
-	            		<ul class="nav">
-							<li><a href="{{site.basePath}}/index.html">Home</a></li>
-	              			<li><a href="{{site.basePath}}/blog.html">Blog</a></li>
-							<li><a href="{{site.basePath}}/archive.html">Archive</a></li>
-	              			<li><a href="http://www.geekeach.com">Work</a></li>
-							<li><a href="{{site.basePath}}/about.html">About</a></li>
-	            		</ul>
-	          		</div>
-	        	</div>
-	      	</div>	
-			<!--end: Navigation -->
-			
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  <span class="sr-only">geekeach</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{site.basePath}}">geekeach</a>
 		</div>
-		<!--end: Container-->			
-			
-	</header>
-	<!--end: Header-->		
-	<!-- start: Container -->	
-	<div class="container" style="min-height:600px;" >
-		{{ content }}
-	</div>
-	<!--end: Container-->
-				
-	<!-- start: Footer -->
-	<div id="footer">
-		
-		<!-- start: Container -->
-		<div class="container">
-	
-			<!-- start: Row -->
-			<div class="row-fluid">
 
-				<!-- start: About -->
-				<div class="span3">
-					
-					<h3>contact</h3>
-					<p>
-						<i class="fa-icon-envelope"></i> Email: ipenglei03#gmail.com
-					</p>
-					<p>
-						<i class="fa-icon-globe"></i> Web: wwww.my-locus.com
-					</p>
-					<p>
-						<i class="fa-icon-globe"></i> Web: wwww.geekeach.com
-					</p>	
-				</div>
-				<!-- end: About -->
-
-				<!-- start: Latest Tweets -->
-				<div class="span3">
-				</div>
-				<!-- end: Latest Tweets -->
-
-				<!-- start: Photo Stream -->
-				<div class="span3">
-				</div>
-				<!-- end: Photo Stream -->
-				
-				<!-- start: Follow Us -->
-				<div class="span3">
-				</div>
-				<!-- end: Follow Us -->
-				
-			</div>
-			<!-- end: Row -->
-		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="{{site.basePath}}">archive</a></li>
+			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="{{ site.basePath}}/feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.basePath}}{{site.static}}/image/glyphicons_417_rss.png"/></a></li>
+			</ul>
 		</div>
-		<!-- end: Container  -->	
-
-	</div>
-	<!-- end: Footer -->
+	</nav>
 	
-<!-- start: Java Script -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="{{site.basePath}}{{site.static}}/js/jquery-1.8.2.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/isotope.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.imagesloaded.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/bootstrap.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/flexslider.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/carousel.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.cslider.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/slider.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/fancybox.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/twitter.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.placeholder.min.js"></script>
+		<div class="container">
+		<div class="col-xs-12 col-md-9 col-sm-9">
+			{{ content }}
+		</div>
+		<div class="col-md-3 col-sm-3 hidden-xs"></div>
+		</div>
+	<div class=""></div>
 
-<script src="{{site.basePath}}{{site.static}}/js/jquery-easing-1.3.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/layerslider.kreaturamedia.jquery.js"></script>
-
-<script src="{{site.basePath}}{{site.static}}/js/excanvas.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.pie.min.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.stack.js"></script>
-<script src="{{site.basePath}}{{site.static}}/js/jquery.flot.resize.min.js"></script>
-
-<script defer="defer" src="{{site.basePath}}{{site.static}}/js/modernizr.js"></script>
-<script defer="defer" src="{{site.basePath}}{{site.static}}/js/retina.js"></script>
-<script defer="defer" src="{{site.basePath}}{{site.static}}/js/custom.js"></script>
-<script defer="defer" src="{{site.basePath}}{{site.static}}/ref/analytics/analytics.js"></script>
-<!-- end: Java Script -->
-
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="{{site.basePath}}{{site.static}}/ref/prettify/prettify.js"></script>
+	<script src="{{site.basePath}}{{site.static}}/ref/analytics/analytics.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("pre").addClass("prettyprint");
+			prettyPrint();
+		});
+	</script>
 </body>
 </html>

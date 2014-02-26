@@ -1,0 +1,24 @@
+---
+layout: default
+titile: tags
+---
+
+<div>
+ <section>
+  <h1>Tags</h1>
+  <ul class="list-inline">
+   {% for tag in site.tags%}
+    <li><a href="{{site.basePath}}/tags.html#{{tag[0]}}-ref"><span class="label label-default">{{tag[0]}}<span class="badge">{{tag[1].size}}</span><span></a></li>
+   {% endfor %}
+  </ul>
+
+  {% for tag in site.tags %}
+   <h2 id="{{tag[0]}}-ref">{{tag[0]}}</h2>
+   <ul>
+    {% for post in tag[1] %}
+     <li><a href="{{site.basePath}}{{post.url}}">{{post.title}}</a></li>
+    {% endfor%}
+   </ul>
+  {% endfor %}
+ </section> 
+</div>

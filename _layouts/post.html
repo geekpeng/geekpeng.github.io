@@ -1,46 +1,42 @@
 ---
 layout: default
 ---
-<!--start: Wrapper-->
-<div id="wrapper">
-			
-	<!--start: Row -->
-	<div class="row-fluid">
-	
-		<div class="posts span8">
-
-			<!-- start: Post -->
-			<div class="post first last">
-				<div class="info">
-					<span class="post-date">
-						<span class="day">{{ page.date | date: "%d" }}</span>
-						<span class="month-year">{{ page.date | date: "%m,%Y" }}</span>
-					</span>
-					<span class="post-icon standard"><i class="fa-icon-pencil"></i></span>
-				</div>
-				<div class="post-content">
-					<div class="post-title">
-						<h2>{{page.title}}</h2>
-					</div>
-					<div class="post-meta">
-						<span><i class="fa-icon-user"></i>By <a href="#">ipenglei</a></span> 
-					</div>
-					<div class="post-description">
-						{{content}}
-					</div>
-		
-				</div>
+<div class="content">
+	<div>
+		<article>
+			<div class="meta">
+				<p class="date-publish">
+					Published:{{page.date|date_to_string}}
+				</p>
+				{% if page.tags %}
+				<ul class="list-tag list-inline">
+					<li class="list-head">tags: </li>
+					{% for tag in page.tags %}
+					<li><a href="{{site.basePath}}/tags.html#{{tag}}-ref"><span class="label label-default">{{tag}}</span></a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
 			</div>
-			<!-- end: Post -->
-			<hr />
-			
-			<div class="clearfix"></div>
-			<hr />
-		</div>	
-
-	
+			<div class="post">
+				<h1>{{page.title}}</h1>
+				{{ content }}
+			</div>
+			<div id="disqus_thread">
+			</div>
+		
+		
+ <script type="text/javascript">
+	var disqus_shortname = 'geekeach'; // required: replace example with your forum shortname
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+ 
+		</article>
 	</div>
-	<!--start: Row -->
-
 </div>
-<!-- end: Wrapper  -->
+   

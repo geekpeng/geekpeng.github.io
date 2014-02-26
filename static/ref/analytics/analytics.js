@@ -4,5 +4,5 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-46661016-1', 'my-locus.com');
+  ga('create', 'UA-46664307-1', 'geekeach.com');
   ga('send', 'pageview');
