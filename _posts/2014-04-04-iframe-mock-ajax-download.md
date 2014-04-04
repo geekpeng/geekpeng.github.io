@@ -20,7 +20,8 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 			<param name="bufferSize">4096</param>
 		</result>  
 	</action>
-  
+>  
+
 	public class FileDownloadAction  extends BaseController{
 		
 		private static final long serialVersionUID = 1L;
