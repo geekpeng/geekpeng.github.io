@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "文件下载当前页面提示错误信息"
 category: java javascript
@@ -6,6 +6,7 @@ tags: java 'file download' jquery
 keywords: java,filedownload,file download,文件下载,ajax download,无跳转提示
 description: 文件下载页面无跳转提示错误信息,使用iframe模拟ajax实现文件下载出错无跳转提示。
 ---
+
 最近在做文件下载的时候,需求需要下载出错或者文件不存在时提示信息需要在当前页面显示。  
 
 因为项目中使用了struts2,在action中直接返回的是 Inputstream, 如果文件不存在跳转到一个页面。  
