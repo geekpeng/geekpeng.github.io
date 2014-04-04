@@ -78,7 +78,7 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 这样做似乎太过于繁琐。  
 
 后面发现可以给form添加一个target属性,指定到页面中的iframe,直接提交就可以了。  
-不是 <a> 标签也有一个target属性吗？直接指定到iframe中会怎样？果然也可以。这样就太简单了。  
+不是 \<a\> 标签也有一个target属性吗？直接指定到iframe中会怎样？果然也可以。这样就太简单了。  
 
 	(function($){  
 		
