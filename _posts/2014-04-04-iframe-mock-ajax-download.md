@@ -64,11 +64,11 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 		}
 	}
 
-在页面直接让下载链接放在<a href="download.......">下载</a>中,下载文件不存在时页面会跳转。  
+在页面直接让下载链接放在\<a href="download......."\>下载\</a\>中,下载文件不存在时页面会跳转。  
 
 在网上有找一个方法但是觉得太复杂了,大概的方法是,在一个form里提交请求,在后台下载的时候如果文件不存在会写入一个cookie信息,然后用js在前台不段的获取cookie数据,再给出提示,再删除cookie信息。  
-可以参考他的实现DEMO：http://jqueryfiledownload.apphb.com/    
-源代码：http://github.com/johnculviner/jquery.fileDownload/blob/master/src/Scripts/jquery.fileDownload.js  
+可以参考他的实现DEMO：[http://jqueryfiledownload.apphb.com/](http://jqueryfiledownload.apphb.com/)    
+源代码：[http://github.com/johnculviner/jquery.fileDownload/blob/master/src/Scripts/jquery.fileDownload.js](http://github.com/johnculviner/jquery.fileDownload/blob/master/src/Scripts/jquery.fileDownload.js)  
 
 之前在使用jquery.from文件上传的时候,发现在IE中实现的方式,其实是使用一个隐藏的iframe提示的。其实文件下载也可以使用这样的方式去实现。  
 
@@ -102,7 +102,7 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 	})(jQuery);
 
 然后页面中下载链接：
-<a href="downloadurl" class="download">download</a>  
+\<a href="downloadurl" class="download"\>download\</a\>  
 加入一段js
 
 	<script>
@@ -126,7 +126,7 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 
 这里只是简单弹出提示。  
 
-这样做有一个问题就是,如果页面中的文件下载链接<a>是通过js动态添加进来的,显示这种方法是不能处理的,对于这种情况,我的做法是阻止<a>的click事件,然后获取到他的href,将这个href更新到iframe的src上。
+这样做有一个问题就是,如果页面中的文件下载链接\<a\>是通过js动态添加进来的,显示这种方法是不能处理的,对于这种情况,我的做法是阻止\<a\>的click事件,然后获取到他的href,将这个href更新到iframe的src上。
 
 
 
