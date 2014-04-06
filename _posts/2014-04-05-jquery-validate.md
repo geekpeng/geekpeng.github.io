@@ -377,7 +377,7 @@ options参数：
 					email:{
 						 depends: function(element) {
 							log(element);
-							log($("#choose_01").val());
+							log($("#form_4 #choose_01").val());
 						 	return ($("#form_4 #choose_01").val() === "true") ? true : false;
 						 }
 					}
@@ -469,7 +469,7 @@ options参数：
 			"click",function(){
 				var form = $(this).closest("form");
 				form[0].reset();
-				from.find("label.error").css("display","hidden");
+				form.find("label.error").css("display","hidden");
 			}
 		)
 		
