@@ -13,7 +13,7 @@ jquery .validate()方法的一些参数
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-	<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 普通的验证:
@@ -76,7 +76,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option1 = {
@@ -118,7 +118,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option = {
@@ -155,7 +155,7 @@ options参数：
 	<label>choose</label><select id="choose_01" name="choose"><option value="true">validate</option><option value="false">no validate</option></select><br>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option4 = {
@@ -166,7 +166,7 @@ options参数：
 				email:{
 					 depends: function(element) {
 						console.log(element);
-						return $("#choose_01").val() === "true" ? true : false;
+						return $("#choose").val() === "true" ? true : false;
 					 }
 				}
 			},
@@ -180,7 +180,7 @@ options参数：
 <form id="form_5">
 	<label>password:</label><input type="password" name="password"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option5 = {
@@ -208,7 +208,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option6 = {
@@ -240,7 +240,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option7 = {
@@ -270,7 +270,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
-		<input type="reset" value="reset"/>
+	<input type="button" class="reset" value="reset"/>
 </form>
 
 	var option8 = {
@@ -324,8 +324,8 @@ options参数：
 				email:{required:"邮箱不能为空",email:"邮箱格式不正确"}
 			},
 			invalidHandler: function(event, validator) {
-				console.log(event);
-				console.log(validator);
+				log(event);
+				log(validator);
 				
 				var errors = validator.numberOfInvalids();
 				if (errors) {
@@ -355,8 +355,8 @@ options参数：
 				userId:{required:"用户id不能为空"}
 			},
 			invalidHandler: function(event, validator) {
-				console.log(event);
-				console.log(validator);
+				log(event);
+				log(validator);
 				
 				var errors = validator.numberOfInvalids();
 				if (errors) {
@@ -376,8 +376,9 @@ options参数：
 					required:true,
 					email:{
 						 depends: function(element) {
-							console.log(element);
-						 	return $("#choose").val() === "true" ? true : false;
+							log(element);
+							conselo.log($("#choose_01").val());
+						 	return ($("#form_4 #choose_01").val() === "true") ? true : false;
 						 }
 					}
 				},
@@ -463,6 +464,19 @@ options参数：
 
 		$("#form_8").validate(option8);
 		
+		
+		$(".reset").on(
+			click,function(){
+				var form = $(this).closest("form");
+				form[0].reset();
+				from.find("label.error").css("display","hidden");
+			}
+		)
+		
 	});
+	
+	function log(infor){
+		console.log(infor)
+	}
 </script>
 
