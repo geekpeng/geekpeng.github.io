@@ -377,7 +377,7 @@ options参数：
 					email:{
 						 depends: function(element) {
 							log(element);
-							conselo.log($("#choose_01").val());
+							log($("#choose_01").val());
 						 	return ($("#form_4 #choose_01").val() === "true") ? true : false;
 						 }
 					}
@@ -476,7 +476,7 @@ options参数：
 	});
 	
 	function log(infor){
-		console.log(infor)
+		window.console || console.log(infor);
 	}
 </script>
 
