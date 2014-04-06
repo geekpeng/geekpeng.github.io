@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "jquery validate option 参数的使用"
 category: java
