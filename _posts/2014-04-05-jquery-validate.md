@@ -283,7 +283,6 @@ options参数：
 **highlight**:(默认:添加一个errorClass 给未通过验证的元素)回调方法有三个参数element,errorClass,validClass可以操作这三个元素对验证效果做一些处理。  
 
 
-<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="">
 	$(document).ready(function(){
