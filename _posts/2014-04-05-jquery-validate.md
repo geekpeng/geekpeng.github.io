@@ -466,7 +466,7 @@ options参数：
 		
 		
 		$(".reset").on(
-			click,function(){
+			"click",function(){
 				var form = $(this).closest("form");
 				form[0].reset();
 				from.find("label.error").css("display","hidden");
