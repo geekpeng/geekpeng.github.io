@@ -284,7 +284,7 @@ options参数：
 
 
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-<script src="">
+<script type="text/javascript">
 	$(document).ready(function(){
 		var option1 = {
 			rules:{
