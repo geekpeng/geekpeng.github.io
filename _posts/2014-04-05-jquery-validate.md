@@ -13,11 +13,13 @@ jquery .validate()方法的一些参数
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+	<input type="reset" value="reset"/>
 </form>
 
 普通的验证:
 
 	var option = {
+		debug:true,
 		rules:{
 			username:{required:true},
 			password:{required:true},
@@ -74,6 +76,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option1 = {
@@ -115,6 +118,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option = {
@@ -148,9 +152,10 @@ options参数：
 **rules**:这个不用说了一些验证规则。还有一个地方需要的提到的是一个depends属性。只有满足每件的时候才会去验证。  
 
 <form id="form_4">
-	<label>choose</label><select id="choose" name="choose"><option value="true">validate</option><option value="false">no validate</option></select><br>
+	<label>choose</label><select id="choose_01" name="choose"><option value="true">validate</option><option value="false">no validate</option></select><br>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option4 = {
@@ -161,7 +166,7 @@ options参数：
 				email:{
 					 depends: function(element) {
 						console.log(element);
-						return $("#choose").val() === "true" ? true : false;
+						return $("#choose_01").val() === "true" ? true : false;
 					 }
 				}
 			},
@@ -175,6 +180,7 @@ options参数：
 <form id="form_5">
 	<label>password:</label><input type="password" name="password"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option5 = {
@@ -202,6 +208,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option6 = {
@@ -233,6 +240,7 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
 
 	var option7 = {
@@ -262,7 +270,9 @@ options参数：
 	<label>password:</label><input type="password" name="password"><br/>
 	<label>email:</label><input type="text" name="email"><br/>
 	<input type="submit" value="submit" >
+		<input type="reset" value="reset"/>
 </form>
+
 	var option8 = {
 		debug:true,
 		rules:{
