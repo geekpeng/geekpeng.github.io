@@ -149,7 +149,7 @@ options参数：
 		}
 	}
 
-**rules**:这个不用说了一些验证规则。还有一个地方需要的提到的是一个depends属性。只有满足每件的时候才会去验证。  
+**rules**:这个不用说了一些验证规则。还有一个地方需要的提到的是一个depends属性。只有满足条件的时候才会去验证(下面的选择是是否去验证邮箱格式)。  
 
 <form id="form_4">
 	<label>choose</label><select id="choose_01" name="choose"><option value="true">validate</option><option value="false">no validate</option></select><br>
@@ -469,7 +469,7 @@ options参数：
 			"click",function(){
 				var form = $(this).closest("form");
 				form[0].reset();
-				form.find("label.error").css("display","hidden");
+				form.find("label.error").css("display","none");
 			}
 		)
 		
