@@ -19,8 +19,9 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 			<param name="contentDisposition">attachment;filename="${fileName}"</param>  
 			<param name="bufferSize">4096</param>
 		</result>  
-	</action>  
-  
+	</action>
+>  
+
 	public class FileDownloadAction  extends BaseController{
 		
 		private static final long serialVersionUID = 1L;
@@ -63,10 +64,10 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 		}
 	}
 
-在页面直接让下载链接放在\<a href=\"download.......\"\>下载\</a\>中,下载文件不存在时页面会跳转。  
+在页面直接让下载链接放在\<a href="download......."\>下载\</a\>中,下载文件不存在时页面会跳转。  
 
 在网上有找一个方法但是觉得太复杂了,大概的方法是,在一个form里提交请求,在后台下载的时候如果文件不存在会写入一个cookie信息,然后用js在前台不段的获取cookie数据,再给出提示,再删除cookie信息。  
-可以参考他的实现DEMO：[http://jqueryfiledownload.apphb.com/](http://jqueryfiledownload.apphb.com/)  
+可以参考他的实现DEMO：[http://jqueryfiledownload.apphb.com/](http://jqueryfiledownload.apphb.com/)    
 源代码：[http://github.com/johnculviner/jquery.fileDownload/blob/master/src/Scripts/jquery.fileDownload.js](http://github.com/johnculviner/jquery.fileDownload/blob/master/src/Scripts/jquery.fileDownload.js)  
 
 之前在使用jquery.from文件上传的时候,发现在IE中实现的方式,其实是使用一个隐藏的iframe提示的。其实文件下载也可以使用这样的方式去实现。  
@@ -77,7 +78,7 @@ description: 文件下载页面无跳转提示错误信息,使用iframe模拟aja
 这样做似乎太过于繁琐。  
 
 后面发现可以给form添加一个target属性,指定到页面中的iframe,直接提交就可以了。  
-不是 <a> 标签也有一个target属性吗？直接指定到iframe中会怎样？果然也可以。这样就太简单了。  
+不是 \<a\> 标签也有一个target属性吗？直接指定到iframe中会怎样？果然也可以。这样就太简单了。  
 
 	(function($){  
 		
