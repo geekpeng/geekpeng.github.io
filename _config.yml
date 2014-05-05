@@ -7,6 +7,6 @@ basePath: //www.geekeach.com
 imagePath: //www.geekeach.com/images
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
-auther: 
+author: 
  name: geek03
  email : geekeach@gmail.com

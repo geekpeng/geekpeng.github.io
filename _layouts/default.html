@@ -13,7 +13,7 @@
 	{% if page.description %}
 	<meta name="description" content="{{ page.description }}">
 	{% else %}
-	<meta name="description" content="geekeach,一个geek程序员的简洁博客,回归技术和写博客的本质,记录个人的编程成长笔记,发表个人博客文章,分享国内外一些优秀的编程文章,交流与学习">
+	<meta name="description" content="geekeach,一个程序员的简洁博客,回归技术和博客的本质,记录个人的编程成长笔记,交流与学习">
 	{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
@@ -25,7 +25,7 @@
 	<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			  <span class="sr-only">geekeach</span>
@@ -38,7 +38,7 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-			  <li class="active"><a href="{{site.basePath}}">archive</a></li>
+			  <li><a href="{{site.basePath}}">archive</a></li>
 			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
