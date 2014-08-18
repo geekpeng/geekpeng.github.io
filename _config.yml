@@ -1,6 +1,5 @@
 name: geekeach
 markdown: redcarpet
-pygments: true
 encoding: utf-8
 port: 4444
 basePath: //www.geekeach.com
