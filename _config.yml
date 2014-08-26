@@ -2,7 +2,7 @@ name: geekeach
 markdown: redcarpet
 encoding: utf-8
 port: 4444
-basePath: //
+basePath: //http://geekpeng.github.io
 imagePath: /images
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
