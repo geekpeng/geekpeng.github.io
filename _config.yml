@@ -2,8 +2,8 @@ name: geekeach
 markdown: redcarpet
 encoding: utf-8
 port: 4444
-basePath: //www.geekeach.com
-imagePath: //www.geekeach.com/images
+basePath: //
+imagePath: //images
 static: /static
 permalink: /:categories/:year_:month_:day/:title.html
 author: 
