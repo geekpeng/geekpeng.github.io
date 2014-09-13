@@ -8,17 +8,17 @@
     {% if page.keywords %}
 	<meta name="keywords" content="{{page.keywords}}" />
 	{% else %}
-	<meta name="keywords" content="geekeach,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby" />
+	<meta name="keywords" content="code,my-locus,mylocus,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby" />
 	{% endif %}
 	{% if page.description %}
 	<meta name="description" content="{{ page.description }}">
 	{% else %}
-	<meta name="description" content="geekeach,一个程序员的简洁博客,回归技术和博客的本质,记录个人的编程成长笔记,交流与学习">
+	<meta name="description" content="code.my-locus,一个程序员的简洁博客,回归技术和博客的本质,记录个人的编程成长笔记">
 	{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/ref/prettify/prettify_desert.css">
-	<link rel="stylesheet" href="{{site.basePath}}{{site.static}}/css/md.css" />
+	<link rel="stylesheet" href="{{site.static}}ref/prettify/prettify_desert.css">
+	<link rel="stylesheet" href="{{site.static}}css/md.css" />
 	<style>
 		body { padding-top: 70px; font-family: "Helvetica Neue",'微软雅黑',Helvetica,Arial,sans-serif;	}
 	</style>
@@ -39,10 +39,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 			  <li><a href="{{site.basePath}}">archive</a></li>
-			  <li><a href="{{ site.basePath }}/about.html">about</a></li>
+			  <li><a href="{{ site.basePath }}about.html">about</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="{{ site.basePath}}/feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.basePath}}{{site.static}}/image/glyphicons_417_rss.png"/></a></li>
+			  <li><a href="{{ site.basePath}}feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.static}}image/glyphicons_417_rss.png"/></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -59,8 +59,8 @@
         <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
-	<script src="{{site.basePath}}{{site.static}}/ref/prettify/prettify.js"></script>
-	<script src="{{site.basePath}}{{site.static}}/ref/analytics/analytics.js"></script>
+	<script src="{{site.static}}ref/prettify/prettify.js"></script>
+	<script src="{{site.static}}ref/analytics/analytics.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("pre").addClass("prettyprint");
