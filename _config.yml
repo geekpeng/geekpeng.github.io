@@ -6,6 +6,8 @@ basePath: /
 imagePath: /images/
 static: /static/
 permalink: /:categories/:year_:month_:day/:title.html
+paginate_path: /page:num
+paginate: 10
 author: 
  name: code.my-locus
  email : ipenglei03@gmail.com

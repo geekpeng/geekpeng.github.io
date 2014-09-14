@@ -152,7 +152,9 @@ dl dd>:last-child {
 
 /* CODE
 =============================================================================*/
-
+div.highlight{
+    margin-bottom:50px;
+}
 pre, code, tt {
   font-size: 12px;
   font-family: Consolas, "Liberation Mono", Courier, monospace;

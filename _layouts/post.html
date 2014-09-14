@@ -4,21 +4,31 @@ layout: default
 <div class="content">
 	<div>
 		<article>
+		    <h1>{{page.title}}</h1>
 			<div class="meta">
-				<p class="date-publish">
-					Published:{{page.date|date_to_string}}
-				</p>
+			    <div style="float:left">
+				{% if page.categories%}
+					    <span><strong>category:</strong>&nbsp;&nbsp;</span>
+					    {% for category in page.categories %}
+					    <a href="{{site.basePath}}categories.html#{{category}}-ref"><span class="label label-default">{{category}}</span></a>
+					    {% endfor %}
+					    &nbsp;&nbsp;&nbsp;
+				{% endif%}
 				{% if page.tags %}
-				<ul class="list-tag list-inline">
-					<li class="list-head">tags: </li>
+					<span class="list-head"><strong>tags:</strong>&nbsp;&nbsp;</span>
 					{% for tag in page.tags %}
-					<li><a href="{{site.basePath}}tags.html#{{tag}}-ref"><span class="label label-default">{{tag}}</span></a></li>
+					<a href="{{site.basePath}}tags.html#{{tag}}-ref"><span class="label label-default">{{tag}}</span></a>
 					{% endfor %}
-				</ul>
 				{% endif %}
+				</div>
+				<div style="float:right">
+				    <span class="date-publish">
+					<strong>Published:</strong>&nbsp;&nbsp;{{page.date|date_to_string}}
+				    </span>
+				</div>
 			</div>
+			<hr>
 			<div class="post">
-				<h1>{{page.title}}</h1>
 				{{ content }}
 			</div>
 			<div id="disqus_thread">
