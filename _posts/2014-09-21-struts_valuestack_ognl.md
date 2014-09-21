@@ -141,13 +141,19 @@ OGNL投影集合的语法为：collection.{expression}
 
 这里只是简单总结:
 ####属性####
+| 表达式 |  |
+| ----- | ----- |
 | "name" | 根对象的name属性, 等于调用了 getName() 方法 |
 | "person.name" | 根对象的person对象的name属性值
 | "#person.name" | namespace 为 person 的对象的 name 属性值
 ####方法####
+| 表达式 |  |
+| ----- | ----- |
 | "getName()" | 根对象的 getName() 方法 
 | "#person.getName()" | namespace 为 person 的对象的 getName() 方法调用
 ####伪属性####
+| 表达式 | 伪属性 | 方法 |
+| ----- | ----- | ------ |
 | Collection | size, isEmpty | size(), isEmpty |
 | List | iterator | iterator() |
 | Map | keys,values | keySet(), valueSet() |
@@ -155,16 +161,26 @@ OGNL投影集合的语法为：collection.{expression}
 | Iterator | next , hasNext | next(), hasNext() |
 | Enumeration | next, hasNext, nextElement, hasMoreElements | next(), hasNext(), nextElement(), hasMoreElements() |
 ####静态属性和方法####
+| 表达式 |
+| ----- |
 | "@@min(4, 5)" |
 | "@java.lang.Math@min(44,56)" |
 | "@java.lang.Math@PI" |
 ####new 对象####
+| 表达式 |
+| ----- |
 | "new com.test.Person()" |
 ####过滤####
+| 表达式 |  |
+| ----- | ----- |
 | collection.{? expression} | "#persons.{? #this.name.length() > 5}“ |
 ####投影####
+| 表达式 |  |
+| ----- | ----- |
 | collection.{expression} | ""#persons.{name}" |
 ####满足条件元素####
+| 表达式 |  |
+| ----- | ----- |
 | collection.{^ expression} | "#persons.{^ #this.name.length() > 5}" |
 下面是看一下 Struts2 中 Ognl 的使用:
 
@@ -173,7 +189,8 @@ ValueStack 的说明, ValueStack 允许多个Bean被push到ValueStack中, 可以
 
 一个例子来说明:
 现在有三个对象(伪代码),在ValueStack中
-
+| 值栈 |
+| ----- |
 | person{name,age} |
 | book{name,cagetory,price} |
 | computer{type,price} |
@@ -220,13 +237,14 @@ ValueStack 的 N 语法
 
 在 Strust 的 Ognl 上下文中 除了 ValueStack 这个根对象外, 还有其他命名空间的对象(除了这些实际上还会有其他的对象,下面的代码会给出)
 
-| namespace | work |
+| namespace | 对应表达式意义 |
+| ----- | ----- |
 | action ｜ 当前的 Action 对象 ｜
 | parameters | #parameters.name 相当于 request.getParameter("name") |
 | request | #request.name 相当于 request.getAttribute("name") |
 | session | #session.name 相当于 session.getAttribute("name") |
 | application | #application.name 相当于 application.getAttribute("name") |
-| attr | pageContext -> request -> session -> application 的顺序访问 attribute |
+| attr | #attr.name, pageContext -> request -> session -> application 的顺序访问 attribute |
 | value stack(root) | 跟对象,会按从上到下顺序来查看,顶层对象为当前的 Action |
 
 
