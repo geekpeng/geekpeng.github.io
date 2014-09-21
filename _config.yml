@@ -1,6 +1,5 @@
 name: coding.my-locus
 markdown: redcarpet
- extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 encoding: utf-8
 port: 4444
 basePath: /
