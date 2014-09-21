@@ -257,7 +257,7 @@ ValueStack 的 N 语法
 
 | namespace | 对应表达式意义 |
 | ----- | ----- |
-| action ｜ 当前的 Action 对象 ｜
+| action | 当前的 Action 对象 |
 | parameters | #parameters.name 相当于 request.getParameter("name") |
 | request | #request.name 相当于 request.getAttribute("name") |
 | session | #session.name 相当于 session.getAttribute("name") |
