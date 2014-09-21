@@ -2,8 +2,8 @@
 layout: post
 title:  "struts2 IOC容器实现跟注入源码分析"
 category: java
-tags: [struts2, ioc，依赖注入]
-keywords: sturts2,container，struts container,ioc,depend inject,struts ioc,struts容器,struts容器依赖注入
+tags: [struts2, ioc, 依赖注入]
+keywords: struts2,container，struts container,ioc,depend inject,struts ioc,struts容器,struts容器依赖注入
 description: 从struts2源码分析struts2容器的实现原理，分析struts2 IOC容器的注入过程
 ---
 在决定看struts容器的之前是因为在这之前有在看struts2的初始化过程，但是对struts2在初始化的时候为什么要初始化两人个容器非常的不理解(其中一个是bootstarp容器)，所以决定看一下struts2容器的实现，最后决定把这笔记放在bolg上，如果你在看的时候可以结合文章下面的几个图片可能会更好理解一些。  
