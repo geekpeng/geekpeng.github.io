@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "jquery validate option 参数的使用"
-categories: [java, jquery]
-tags: [js, jquery]
+categories: [jquery]
+tags: [js, jquery, jquery validate]
 keywords: geek,geekeach,jquery validate, validate, 表单验证,js 验证,jquery validate验证,jquery 验证插件
 description: jquery validate 一些参数的作用,及验证的一些示例
 ---

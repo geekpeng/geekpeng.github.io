@@ -205,5 +205,5 @@ Configuration 加载容器
 7. 初始化 ExecuteOperations 对象. 在 struts2 对 request 请求处理过程中 负责执行request请求
 8. 清理资源
 
-<a href="{{ site.basePath }}java/2014_09_20/struts2_process_request.html" target="_blank">struts2 请求处理过程</a>
+<a href="{{ site.basePath }}2014/09/struts2_process_request.html" target="_blank">struts2 请求处理过程</a>
 

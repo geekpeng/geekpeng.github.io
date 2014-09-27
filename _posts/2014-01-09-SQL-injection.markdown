@@ -2,7 +2,7 @@
 layout: post
 title:  "sql 注入"
 category: sql
-tags: sql read
+tags: [sql, read]
 keywords: sql injection,sql注入
 description: sql注入，error-based inject,Union-based injection,boolean-based injection,Time-based injection
 ---

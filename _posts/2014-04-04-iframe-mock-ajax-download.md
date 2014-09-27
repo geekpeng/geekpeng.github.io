@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "文件下载当前页面提示错误信息"
-category: java
+category: jquery
 tags: [java, file download, jquery]
 keywords: java,filedownload,file download,文件下载,ajax download,无跳转提示
 description: 文件下载页面无跳转提示错误信息,使用iframe模拟ajax实现文件下载出错无跳转提示。

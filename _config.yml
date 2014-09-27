@@ -7,7 +7,7 @@ port: 4444
 basePath: /
 imagePath: /images/
 static: /static/
-permalink: /:categories/:year_:month_:day/:title.html
+permalink: /:year/:month/:title.html
 paginate_path: /page:num
 paginate: 10
 author: 

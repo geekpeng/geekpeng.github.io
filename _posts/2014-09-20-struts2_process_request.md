@@ -62,7 +62,7 @@ StrutsPrepareAndExecuteFilter 的 doFilter 方法：
         return ctx;
     }
    
-实际上ActionContext 跟 ValueStack 维护的是相同的上下文 跟 Ongl 上下文 关于 ActionContext 中放入的值的问题可以看 <a href="java/2014_09_20/struts_valuestack_ognl.html">这里</a>
+实际上ActionContext 跟 ValueStack 维护的是相同的上下文 跟 Ongl 上下文 关于 ActionContext 中放入的值的问题可以看 <a href="{{ site.basePath }}2014/09/struts_valuestack_ognl.html">这里</a>
 
 #### Find ActionMapping ####
    
@@ -363,4 +363,4 @@ ActionProxy 的execute 方法中调用 ActionInvoke 执行代理对象
  5. 处理 Action 执行结果(Chain, Redirect, Dispatcher)
 3. 清理
 
-<a href="{{ site.basePath }}java/2014_09_20/struts2_init.html" target="_blank">struts2 初始化过程</a>
+<a href="{{ site.basePath }}2014/09/struts2_init.html" target="_blank">struts2 初始化过程</a>
