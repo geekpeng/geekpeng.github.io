@@ -11,5 +11,5 @@ permalink: /:year/:month/:title.html
 paginate_path: /page:num
 paginate: 10
 author: 
- name: code.my-locus
- email : ipenglei03@gmail.com
+ name: coding.my-locus
+ email : pxxxlei@gmail.com
