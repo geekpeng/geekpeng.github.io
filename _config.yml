@@ -9,7 +9,7 @@ basePath: //coding.my-locus.com/
 imagePath: //coding.my-locus.com/images/
 static: //coding.my-locus.com/static/
 permalink: //coding.my-locus.com/:year/:month/:title.html
-paginate_path: //coding.my-locus.com/page:num
+paginate_path: /page:num
 paginate: 10
 author: 
  name: coding.my-locus
