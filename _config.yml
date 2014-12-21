@@ -11,7 +11,7 @@ static: //coding.my-locus.com/static/
 permalink: /:year/:month/:title.html
 pagePath: //coding.my-locus.com/page/
 paginate_path: /page:num
-paginate: 2
+paginate: 10
 author: 
  name: coding.my-locus
  email : pxxxlei@gmail.com
