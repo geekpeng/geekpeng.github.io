@@ -4,9 +4,15 @@ redcarpet:
  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 encoding: utf-8
 port: 4444
+
 basePath: //coding.my-locus.com/
 imagePath: //coding.my-locus.com/images/
 static: //coding.my-locus.com/static/
+
+#basePath: /
+#imagePath: /images/
+#static: /static/
+
 permalink: /:year/:month/:title.html
 pagePath: //coding.my-locus.com/page/
 paginate_path: /page:num
