@@ -78,6 +78,18 @@ Hash Keys
     puts(reviews[book2]) # => 'Nice and compact!'
 
 
+Hash 常用的方法:
+1, 公共的类方法:
+Hash[key,value,...]
+Hash["a",2,"b",4] #=>创建一个hash, {"a"=>2, "b"=>4}
+Hash[[[key,value],...]]
+Hash[["a",2],["b",4]] #=>创建了一个Hash, {"a"=>2,"b"=>4}
+Hash[Object]
+
+try_convert(obj) # 转成 hash
+
+
+
 
 
 
