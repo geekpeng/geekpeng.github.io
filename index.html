@@ -25,6 +25,8 @@ title: coding.my-locus
 	
 	<!-- 分页链接 -->
     <div class="pagination">
+      
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
       {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
         <a href="/" class="previous">Previous</a>
@@ -34,7 +36,6 @@ title: coding.my-locus
       {% else %}
         <span class="previous">Previous</span>
       {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
       {% if paginator.next_page %}
         <a href="/page{{ paginator.next_page }}" class="next">Next</a>
       {% else %}
