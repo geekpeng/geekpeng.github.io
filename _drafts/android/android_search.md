@@ -55,4 +55,13 @@ widget search for android 3.0...
 3. androidManifest.xml 指定支持搜索的 Activiry 的 meta-data
 4. androidManifest.xml 指定处理搜索的 Activiry 的 intent-filter
     
+    
+    
+    
+
+1, 添加搜索部件
+2, 执行搜索,并显示结果.查看结果详情
+3, 添加搜索建议(1. 使用历史搜索提示, 2. 使用自定义搜索提示, 3. 历史提示跟自定义提示结合)
+4, 点击搜索提示直接执行搜索(或者其他操作)
+
 
