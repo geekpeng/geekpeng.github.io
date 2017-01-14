@@ -83,14 +83,14 @@ ngrok需要一个域名作为base域名，ngrok会为客户端分配base域名�
 
 可选参数:
 
-  -domain="ngrok.com": Domain where the tunnels are hosted
-  -httpAddr=":80": Public address for HTTP connections, empty string to disable
-  -httpsAddr=":443": Public address listening for HTTPS connections, emptry string to disable
-  -log="stdout": Write log messages to this file. 'stdout' and 'none' have special meanings
-  -log-level="DEBUG": The level of messages to log. One of: DEBUG, INFO, WARNING, ERROR
-  -tlsCrt="": Path to a TLS certificate file
-  -tlsKey="": Path to a TLS key file
-  -tunnelAddr=":4443": Public address listening for ngrok client
+	-domain="ngrok.com": Domain where the tunnels are hosted
+	-httpAddr=":80": Public address for HTTP connections, empty string to disable
+	-httpsAddr=":443": Public address listening for HTTPS connections, emptry string to disable
+	-log="stdout": Write log messages to this file. 'stdout' and 'none' have special meanings
+	-log-level="DEBUG": The level of messages to log. One of: DEBUG, INFO, WARNING, ERROR
+	-tlsCrt="": Path to a TLS certificate file
+	-tlsKey="": Path to a TLS key file
+	-tunnelAddr=":4443": Public address listening for ngrok client
 
 
 #### 编译客户端:
@@ -144,16 +144,19 @@ ngrok需要一个域名作为base域名，ngrok会为客户端分配base域名�
 启动客户端:
 
 http:
+
 ngrok.exe -config=ngrok.cfg start test
 
 
 tcp:(这里测试连接内网mysql)
+
 ngrok.exe -config=ngrok.cfg start mysql
 
 
 其他注意问题:
 
 tunnel.mydomain.com 需要解析到ngrok所在主机
+
 *.tunnel.mydomain.com 需要解析到ngrok所在主机
 
 
