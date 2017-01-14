@@ -161,6 +161,3 @@ tunnel.mydomain.com 需要解析到ngrok所在主机
 
 
 
-http://www.sunnyos.com/article-show-48.html
-http://blog.lzp.name/archives/24
-https://toontong.github.io/blog/about-ngrok.html
