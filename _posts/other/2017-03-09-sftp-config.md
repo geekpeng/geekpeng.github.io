@@ -14,13 +14,13 @@ description: centos下搭建配置sftp服务文件上传
 可以输入：
 
 	# ssh -V  
-	
+
 来查看openssh的版本，如果低于4.8p1，需要自行升级安装，不在这里具体介绍了。
 
 假设，有一个名为sftp的组，这个组中的用户只能使用sftp，不能使用ssh，且sftp登录后只能在自己的home目录下活动
 
 1.创建sftp组
-	
+
 	# groupadd sftp  
 
 
@@ -39,7 +39,7 @@ description: centos下搭建配置sftp服务文件上传
 编辑 /etc/ssh/sshd_config
 
 	# vim +132 /etc/ssh/sshd_config  
-	
+
 找到如下这行，并注释掉
 
 	Subsystem      sftp    /usr/libexec/openssh/sftp-server  
@@ -83,12 +83,14 @@ X11Forwarding no
 错误的目录权限设定会导致在log中出现”fatal: bad ownership or modes for chroot directory XXXXXX”的内容
 
 目录的权限设定有两个要点：
-1.由ChrootDirectory指定的目录开始一直往上到系统根目录为止的目录拥有者都只能是root
-2.由ChrootDirectory指定的目录开始一直往上到系统根目录为止都不可以具有群组写入权限
+
+1. 由ChrootDirectory指定的目录开始一直往上到系统根目录为止的目录拥有者都只能是root
+2. 由ChrootDirectory指定的目录开始一直往上到系统根目录为止都不可以具有群组写入权限
 
 所以遵循以上两个原则
-1.我们将/data/sftp/mysftp的所有者设置为了root，所有组设置为sftp
-2.我们将/data/sftp/mysftp的权限设置为755，所有者root有写入权限，而所有组sftp无写入权限
+
+1. 我们将/data/sftp/mysftp的所有者设置为了root，所有组设置为sftp
+2. 我们将/data/sftp/mysftp的权限设置为755，所有者root有写入权限，而所有组sftp无写入权限
 
 6.建立SFTP用户登入后可写入的目录
 照上面设置后，在重启sshd服务后，用户mysftp已经可以登录，但使用chroot指定根目录后，根应该是无法写入的，所以要新建一个目录供mysftp上传文件。这个目录所有者为mysftp，所有组为sftp，所有者有写入权限，而所有组无写入权限
@@ -103,7 +105,3 @@ X11Forwarding no
 
 ###引用:###
 http://blog.sina.com.cn/s/blog_4fd50c3901018a0l.html
-
-
-
-
