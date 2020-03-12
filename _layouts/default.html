@@ -1,79 +1,21 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-	
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }}{% else %}coding.my-locus{% endif %}</title>
-    {% if page.keywords %}
-	<meta name="keywords" content="{{page.keywords}}" />
-	{% else %}
-	<meta name="keywords" content="code,my-locus,mylocus,geek,coding,编程,IT,程序员,IT博客,IT分享,编程博客,java,ruby,groovy,go" />
-	{% endif %}
-	{% if page.description %}
-	<meta name="description" content="{{ page.description }}">
-	{% else %}
-	<meta name="description" content="coding.my-locus,一个程序员的博客,关于java,groovy,ruby,go,android">
-	{% endif %}
-	<meta name="author" content="{{ site.author.name }}">
-	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{site.static}}ref/prettify/prettify_default.css">
-	<link rel="stylesheet" href="{{site.static}}css/md.css" />
-	<style>
-		body { padding-top: 70px; font-family: "Helvetica Neue",'微软雅黑',Helvetica,Arial,sans-serif;	}
-	</style>
-	<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			  <span class="sr-only">coding.my-locus</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="{{site.basePath}}">coding.my-locus</a>
-		</div>
+---
+layout: compress
+---
 
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-			  <li><a href="{{site.basePath}}archives.html">archives</a></li>
-			  <li><a href="{{site.basePath}}categories.html">categories</a></li>
-			  <li><a href="{{site.basePath}}tags.html">tags</a></li>
-			  <li><a href="{{ site.basePath }}about.html">about</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="{{ site.basePath}}feed.xml"><img class="rollover" title="rss" alt="rss" src="{{site.static}}image/glyphicons_417_rss.png"/></a></li>
-			</ul>
-		</div>
-	</nav>
-	
-		<div class="container">
-		<div class="col-xs-12 col-md-10 col-sm-10 col-lg-10">
-			{{ content }}
-		</div>
-		<div class="col-md-2 col-sm-2 col-lg-2 hidden-xs"></div>
-		</div>
-	<div>
-	    <div class="pull-right">
-	    &copy;my-locus.com <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/2.5/cn/80x15.png" /></a>
-	    </div>
-	</div>
-	<!--[if lt IE 9]>
-        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
-	<script src="{{site.static}}ref/prettify/prettify.js"></script>
-	<script src="{{site.static}}ref/analytics/analytics.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("pre").addClass("prettyprint");
-			prettyPrint();
-		});
-	</script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+     {% include masthead.html %}
+
+      <main id="main" role="main">
+	      
+        {{ content }}
+      </main>
+
+    {% include footer.html %}
+
+  </body>
 </html>
