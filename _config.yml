@@ -5,18 +5,18 @@ redcarpet:
 encoding: utf-8
 port: 4444
 
-basePath: //coding.my-locus.com/
-imagePath: //coding.my-locus.com/images/
-static: //coding.my-locus.com/static/
+# basePath: //coding.my-locus.com/
+# imagePath: //coding.my-locus.com/images/
+# static: //coding.my-locus.com/static/
 
-#basePath: /
-#imagePath: /images/
-#static: /static/
+basePath: /
+imagePath: /images/
+static: /static/
 
 permalink: /:year/:month/:title.html
-pagePath: //coding.my-locus.com/page/
+pagePath: //geekpeng.github.io/page/
 paginate_path: /page:num
 paginate: 20
 author: 
- name: coding.my-locus
- email : pxxxlei@gmail.com
+ name: coding
+ email : nioemail@sina.com
